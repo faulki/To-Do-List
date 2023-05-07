@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+  </head>
+  <link rel="stylesheet" href="css.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="javascript.js"></script>
+  <body>
+    <h1>To-Do List</h1>
+    <button id="mode-nuit">Mode nuit</button>
+    <h2>Créer une tâche</h2>
+    <form id="createTache">
+      <label for="description">Tâche à effectuer:</label>
+      <input maxlength="200" type="text" id="description" name="description" required>
+      <span id="task-name-counter"></span>
+
+      <label for="category">Catégorie:</label>
+      <input maxlength="100" type="text" id="category" name="category" required><br>
+
+      <label for="priority">Priorité:</label>
+      <select id="priority" name="priority">
+        <option value="3">Peu important</option>
+        <option value="2">Important</option>
+        <option value="1">Très important</option>
+      </select><br>
+
+      <button type="button" id="addTache">Ajouter</button>
+    </form>
+
+    <h2>Liste des tâches</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tâches à faire</th>
+          <th>Catégorie</th>
+          <th>Priorité</th>
+          <th>Supprimer</th>
+          <th>Modifier</th>
+        </tr>
+      </thead>
+      <tbody id="task-list">
+        <!-- Les tâches ajoutées apparaîtront ici -->
+      </tbody>
+    </table>
+  </body>
+</html>
